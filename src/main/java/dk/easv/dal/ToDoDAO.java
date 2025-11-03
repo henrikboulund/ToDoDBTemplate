@@ -16,7 +16,7 @@ public class ToDoDAO
 
     public ToDoDAO() throws IOException {}
 
-    public List<ToDoItem> getAllToDos() throws Exception
+    public List<ToDoItem> getAllToDos(int userId) throws Exception
     {
         ArrayList<ToDoItem> allToDos = new ArrayList<>();
 
@@ -24,7 +24,7 @@ public class ToDoDAO
         try (Connection conn = dbConnector.getConnection();
              Statement stmt = conn.createStatement())
         {
-            String sql = "SELECT * FROM dbo.Movie";
+            String sql = "SELECT * FROM dbo.ToDos WHERE ";
             ResultSet rs = stmt.executeQuery(sql);
 
             // Loop through rows from the database result set
