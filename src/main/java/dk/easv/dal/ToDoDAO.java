@@ -24,7 +24,7 @@ public class ToDoDAO
         try (Connection conn = dbConnector.getConnection();
              Statement stmt = conn.createStatement())
         {
-            String sql = "SELECT * FROM dbo.ToDos WHERE ";
+            String sql = "SELECT * FROM dbo.ToDos";
             ResultSet rs = stmt.executeQuery(sql);
 
             // Loop through rows from the database result set

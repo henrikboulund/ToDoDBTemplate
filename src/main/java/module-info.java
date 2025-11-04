@@ -3,7 +3,6 @@ module dk.easv.gui {
     requires javafx.fxml;
     requires java.sql;
     requires com.microsoft.sqlserver.jdbc;
-    requires dk.easv.gui;
 
 
     opens dk.easv.gui to javafx.fxml;
