@@ -64,4 +64,8 @@ public class UserItem
         ToDos = toDos;
     }
 
+    @Override
+    public String toString() {
+        return Id + ":" +  Username;
+    }
 }
